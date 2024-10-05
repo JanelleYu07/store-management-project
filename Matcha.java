@@ -4,7 +4,10 @@ public class Matcha extends Drink {
     private boolean isSweetened;
     private int matchaScoops;
 
-    // Constructor Methods 
+    /*
+    * Constructor Methods
+    */
+    
     // No Argument
     public Matcha() {
         this("No size", 0.0, false, false, 1);
@@ -15,8 +18,12 @@ public class Matcha extends Drink {
         super(size, price, isIced);
         this.isSweetened = isSweetened;
         this.matchaScoops = matchaScoops;
-    } // <-- Closing brace for the constructor
+    } 
 
+    /*
+    * Accessor and Mutator Methods
+    */ 
+  
     // Accessor Methods
     public boolean getIsSweetened() {
         return isSweetened;

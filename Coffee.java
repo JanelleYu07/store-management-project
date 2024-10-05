@@ -4,7 +4,10 @@ public class Coffee extends Drink {
     private boolean hasCaffeine;
     private int espressoShots;
 
-    // Constructor Methods 
+    /*
+    * Constructor Methods
+    */
+  
     // No Argument
     public Coffee() {
         super("No size", 0.0, false); 
@@ -19,7 +22,10 @@ public class Coffee extends Drink {
         this.espressoShots = espressoShots;
     }
 
-    // Accessor and Mutator Methods
+    /*
+    * Accessor and Mutator Methods
+    */ 
+  
     // Accessor Methods
     public boolean getHasCaffeine() {
         return hasCaffeine;

@@ -6,6 +6,24 @@ public class StoreRunner {
     // Creates a Scanner object - feel free to delete if not using!
     Scanner input = new Scanner(System.in);
 
+    /* 
+    * Prints out default drinks
+    */ 
+    System.out.println();
+    System.out.println("---------Default Drinks----------");
+    Drink d1= new Drink();
+    System.out.println(d1);
+    Drink d2 = new Drink("Small", 6.50, true);
+    System.out.println(d2);
+
+    Coffee c1 = new Coffee("Medium", 4.25, true, false, 2);
+    System.out.println(c1);
+    
+    Matcha m1 = new Matcha("Medium", 5.75, true, true, 1);
+    System.out.println(m1);
+    System.out.println("---------------------------------");
+    System.out.println();
+    
     /*
     * Instantiates Coffee Object
     */
@@ -32,7 +50,7 @@ public class StoreRunner {
     newCoffee.setHasCaffeine(userHasCaffeine); 
 
     // Get espressoShots Input with Scanner Object
-    System.out.println("How many esspresso shots does the coffee have?");
+    System.out.println("How many espresso shots does the coffee have?");
     int userEspressoShots = input.nextInt();
     newCoffee.setEspressoShots(userEspressoShots); 
 
@@ -41,8 +59,16 @@ public class StoreRunner {
     System.out.println("----------Coffee Order----------");    
     System.out.println("Size: " + newCoffee.getSize());
     System.out.println("Price: $" + newCoffee.getPrice());
-    System.out.println("Is it Iced? " + newCoffee.getIsIced());   
-    System.out.println("Is it Caffeinated? " + newCoffee.getHasCaffeine());
+    if (userIsIced == true) {
+      System.out.println("Is it Iced? " + "Yes");   
+    } else {
+      System.out.println("Is it Iced? " + "No");   
+    }
+    if (userHasCaffeine == true) {
+      System.out.println("Is it Caffeinated? " + "Yes");
+    } else {
+      System.out.println("Is it Caffeinated? " + "No");
+    }
     System.out.println("How Many Espresso Shots? " + newCoffee.getEspressoShots());
     System.out.println("--------------------------------");
     System.out.println();
@@ -83,25 +109,18 @@ public class StoreRunner {
     System.out.println("----------Matcha Order----------");
     System.out.println("Size: " + newMatcha.getSize());
     System.out.println("Price: $" + newMatcha.getPrice());
-    System.out.println("Is it Iced? " + newMatcha.getIsIced());   
-    System.out.println("Is it Sweetened? " + newMatcha.getIsSweetened());
+    if (matchaIsIced == true) {
+      System.out.println("Is it Iced? " + "Yes");   
+    } else {
+      System.out.println("Is it Iced? " + "No");   
+    }
+    if (userIsSweetened == true) {
+      System.out.println("Is it Sweetened? " + "Yes");
+    } else {
+      System.out.println("Is it Sweetened? " + "No");
+    }
     System.out.println("How Many Matcha Scoops? " + newMatcha.getMatchaScoops());
     System.out.println("--------------------------------");
-
-    System.out.println();
-    System.out.println("---------Default Drinks----------");
-    Drink d1= new Drink();
-    System.out.println(d1);
-    Drink d2 = new Drink("Small", 6.50, true);
-    System.out.println(d2);
-
-    Coffee c1 = new Coffee("Medium", 4.25, true, false, 2);
-    System.out.println(c1);
-    
-    Matcha m1 = new Matcha("Medium", 5.75, true, true, 1);
-    System.out.println(m1);
-    System.out.println("---------------------------------");
-
 
     // Closes the Scanner object
     input.close();

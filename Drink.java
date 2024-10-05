@@ -4,7 +4,10 @@ public class Drink {
   private double price;
   boolean isIced;
   
-  // Constructor Methods
+  /*
+  * Constructor Methods
+  */
+  
   // No Argument
   public Drink() {
     size = "No size";
@@ -19,7 +22,10 @@ public class Drink {
     this.isIced = isIced;
   }
   
-  // Accessor and Mutator Methods
+  /*
+  * Accessor and Mutator Methods
+  */   
+  
   // Accessor Methods
   public String getSize() {
     return size;
