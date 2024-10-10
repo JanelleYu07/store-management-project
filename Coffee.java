@@ -1,32 +1,39 @@
 public class Coffee extends Drink {
 
-    // Instance Variables
+    /*
+    * Instance Variables
+    */
     private boolean hasCaffeine;
     private int espressoShots;
 
     /*
-    * Constructor Methods
+    * No Argument Constructor Method
     */
   
-    // No Argument
     public Coffee() {
         super("No size", 0.0, false); 
         hasCaffeine = true;
         espressoShots = 1;
     }
-
-    // Parameterized 
+    /*
+    * Parameterized Constructor Methods
+    */
     public Coffee(String size, double price, boolean isIced, boolean hasCaffeine, int espressoShots) {
         super(size, price, isIced); 
         this.hasCaffeine = hasCaffeine;
         this.espressoShots = espressoShots;
     }
+  
+      public Coffee(String size, double price, boolean isIced, int espressoShots) {
+        super(size, price, isIced); 
+        this.hasCaffeine = true;
+        this.espressoShots = espressoShots;
+    }
 
     /*
-    * Accessor and Mutator Methods
+    * Accessor Methods
     */ 
-  
-    // Accessor Methods
+
     public boolean getHasCaffeine() {
         return hasCaffeine;
     }
@@ -35,7 +42,9 @@ public class Coffee extends Drink {
         return espressoShots;
     }
 
-    // Mutator Methods
+    /*
+    * Mutator Methods
+    */ 
     public void setHasCaffeine(boolean hasCaffeine) {
         this.hasCaffeine = hasCaffeine;
     }
@@ -43,8 +52,10 @@ public class Coffee extends Drink {
     public void setEspressoShots(int espressoShots) {
         this.espressoShots = espressoShots;
     }
-
-    // toString Method Override
+  
+    /*
+    * toString Method Override
+    */ 
     public String toString() {
       String caffeine;
       if (hasCaffeine == true) {

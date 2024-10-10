@@ -1,32 +1,40 @@
 public class Drink {
-  // Instance Variables
+  
+  /*
+  * Instance Variables
+  */
   private String size;
   private double price;
   boolean isIced;
   
   /*
-  * Constructor Methods
+  * No-Argument Constructor Method
   */
-  
-  // No Argument
   public Drink() {
     size = "No size";
     price = 0.0;
     isIced = false;
   }
   
-  // Parameterized
+  /*
+  * Parameterized Constructor Methods
+  */
   public Drink(String size, double price, boolean isIced) {
     this.size = size;
     this.price = price;
     this.isIced = isIced;
   }
+
+  public Drink(String size, double price) {
+    this.size = size;
+    this.price = price;
+    this.isIced = true;
+  }
   
   /*
-  * Accessor and Mutator Methods
+  * Accessor Methods
   */   
   
-  // Accessor Methods
   public String getSize() {
     return size;
   }
@@ -39,7 +47,9 @@ public class Drink {
     return isIced;
   }
   
-  //Mutator Methods
+  /*
+  * Mutator Methods
+  */   
   public void setSize(String size) {
     this.size = size;
   }
@@ -55,8 +65,10 @@ public class Drink {
   public void setIsIced(boolean isIced) {
     this.isIced = isIced;
   }
-  
-  // toString Method Override
+
+  /*
+  * toString Method Override
+  */   
   public String toString() {
     String text;
     if (isIced == true) {

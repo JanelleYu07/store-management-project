@@ -1,30 +1,36 @@
 public class Matcha extends Drink {
 
-    // Instance Variables
+    /*
+    * Instance Variables
+    */
     private boolean isSweetened;
     private int matchaScoops;
 
     /*
-    * Constructor Methods
+    * No Argument Constructor Methods
     */
-    
-    // No Argument
     public Matcha() {
         this("No size", 0.0, false, false, 1);
     }
 
-    // Parameterized Constructor
+    /*
+    * Parameterized Constructor Methods
+    */
     public Matcha(String size, double price, boolean isIced, boolean isSweetened, int matchaScoops) {
         super(size, price, isIced);
         this.isSweetened = isSweetened;
         this.matchaScoops = matchaScoops;
     } 
 
+    public Matcha(String size, double price, boolean isIced, int matchaScoops) {
+        super(size, price, isIced);
+        this.isSweetened = true;
+        this.matchaScoops = matchaScoops;
+    } 
+
     /*
-    * Accessor and Mutator Methods
+    * Accessor Methods
     */ 
-  
-    // Accessor Methods
     public boolean getIsSweetened() {
         return isSweetened;
     }
@@ -33,7 +39,9 @@ public class Matcha extends Drink {
         return matchaScoops;
     }
 
-    // Mutator Methods
+    /*
+    * Mutator Methods
+    */ 
     public void setIsSweetened(boolean isSweetened) {
         this.isSweetened = isSweetened;
     }
@@ -42,7 +50,9 @@ public class Matcha extends Drink {
         this.matchaScoops = matchaScoops;
     }
 
-    // toString Method Override
+    /*
+    * toString Method Override
+    */ 
     public String toString() {
       String sweetened;
       if (isSweetened == true) {
